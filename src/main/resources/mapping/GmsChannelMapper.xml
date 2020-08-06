@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xianfeng.data.db.gmssdk.dao.GmsChannelDao">
+  <resultMap id="gmsChannelMap" type="com.xianfeng.data.db.gmssdk.bean.GmsChannel">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="system" jdbcType="VARCHAR" property="system" />
+    <result column="purpose" jdbcType="VARCHAR" property="purpose" />
+    <result column="corporation" jdbcType="VARCHAR" property="corporation" />
+    <result column="platform" jdbcType="VARCHAR" property="platform" />
+    <result column="alias" jdbcType="VARCHAR" property="alias" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="idx" jdbcType="INTEGER" property="idx" />
+    <result column="announcement" jdbcType="VARCHAR" property="announcement" />
+    <result column="mode" jdbcType="INTEGER" property="mode" />
+    <result column="updateMode" jdbcType="INTEGER" property="updatemode" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="size" jdbcType="VARCHAR" property="size" />
+    <result column="serviceAnnouncement" jdbcType="VARCHAR" property="serviceannouncement" />
+    <result column="officeURL" jdbcType="VARCHAR" property="officeurl" />
+  </resultMap>
+
+  <select id="selectChannels" resultMap="gmsChannelMap">
+    select distinct cid as cid, name as name
+    from gms_channel
+  </select>
+
+</mapper>

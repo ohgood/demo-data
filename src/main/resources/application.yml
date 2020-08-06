@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: @profileActive@
+  boot:
+    admin:
+      client:
+        url: http://localhost:8088
+        username: 123
+        password: 123
+
+server:
+  port: 8085
+  servlet:
+    context-path: /api
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
