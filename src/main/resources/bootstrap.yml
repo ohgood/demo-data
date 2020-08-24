@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      label: master
+      label: ${spring.profiles.active}
       discovery:
         enabled: true
         service-id: config

@@ -4,7 +4,7 @@ server:
     context-path: /api
 spring:
   profiles:
-    active: master
+    active: @profileActive@
   application:
     name: eureka-client-article-service
   boot:
